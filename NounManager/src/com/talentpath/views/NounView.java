@@ -8,6 +8,7 @@ public interface NounView {
     int mainMenu();
 
     void printErrorMessage(String message);
+    void printSuccessMessage();
 
     void printGoodbye();
 
@@ -15,5 +16,5 @@ public interface NounView {
 
     void displayNoun( Noun toDisplay );
 
-    String addNoun();
+    String getUserNoun();
 }

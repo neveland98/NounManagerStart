@@ -64,13 +64,17 @@ public class NounController {
 
     private void addNoun() {
 
-        service.addNoun(view.addNoun());
+        service.addNoun(view.getUserNoun());
 
     }
 
     private void removeNoun(){
-        throw new UnsupportedOperationException();
-
+        boolean success = service.removeNoun(view.getUserNoun());
+        if (!success) {
+            view.printErrorMessage("Noun not in list!");
+        } else {
+            view.printSuccessMessage();
+        }
     }
 
     private void getNounById(){

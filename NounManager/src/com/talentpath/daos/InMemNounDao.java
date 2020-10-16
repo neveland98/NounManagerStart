@@ -43,6 +43,15 @@ public class InMemNounDao implements NounDao {
         }
         return -1;
     }
+    @Override
+    public int isInList(String n) {
+        for(Noun item: allNouns) {
+            if(item.getName().equals(n)) {
+                return allNouns.indexOf(item);
+            }
+        }
+        return -1;
+    }
 
     @Override
     public void addNoun(Noun nounToAdd) {
@@ -52,5 +61,14 @@ public class InMemNounDao implements NounDao {
         else {
             allNouns.get(isInList(nounToAdd)).setQuantity(allNouns.get(isInList(nounToAdd)).getQuantity()+1);
         }
+    }
+
+    @Override
+    public boolean removeNoun(String userNoun) {
+        if(isInList(userNoun) != -1) {
+            allNouns.remove(isInList(userNoun));
+            return true;
+        }
+        return false;
     }
 }

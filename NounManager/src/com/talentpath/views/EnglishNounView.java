@@ -56,7 +56,12 @@ public class EnglishNounView implements NounView {
     }
 
     @Override
-    public String addNoun() {
+    public String getUserNoun() {
         return io.getString("Enter the name of a noun: ");
+    }
+
+    @Override
+    public void printSuccessMessage() {
+        io.print("Success!\n");
     }
 }

@@ -8,5 +8,9 @@ public interface NounDao {
     List<Noun> getAllNouns();
     int isInList(Noun n);
 
+    int isInList(String n);
+
     void addNoun(Noun nounToAdd);
+
+    boolean removeNoun(String userNoun);
 }

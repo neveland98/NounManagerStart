@@ -19,4 +19,14 @@ public class PostgresNounDao implements NounDao{
     public int isInList(Noun n) {
         throw new UnsupportedOperationException();
     }
+
+    @Override
+    public boolean removeNoun(String userNoun) {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override
+    public int isInList(String n) {
+        throw new UnsupportedOperationException();
+    }
 }

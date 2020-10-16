@@ -21,4 +21,10 @@ public class NounService {
         Noun nounToAdd = new Noun(s.hashCode(),s,1L,false);
         dao.addNoun(nounToAdd);
     }
+
+    public boolean removeNoun(String userNoun) {
+        return dao.removeNoun(userNoun);
+    }
+
+
 }

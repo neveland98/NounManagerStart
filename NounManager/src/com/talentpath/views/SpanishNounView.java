@@ -32,7 +32,12 @@ public class SpanishNounView implements NounView {
     }
 
     @Override
-    public String addNoun() {
+    public String getUserNoun() {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override
+    public void printSuccessMessage() {
         throw new UnsupportedOperationException();
     }
 }
