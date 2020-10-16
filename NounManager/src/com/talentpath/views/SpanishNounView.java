@@ -30,4 +30,9 @@ public class SpanishNounView implements NounView {
     public void displayNoun(Noun toDisplay) {
         throw new UnsupportedOperationException();
     }
+
+    @Override
+    public String addNoun() {
+        throw new UnsupportedOperationException();
+    }
 }

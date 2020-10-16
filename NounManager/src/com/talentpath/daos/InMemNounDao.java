@@ -33,4 +33,24 @@ public class InMemNounDao implements NounDao {
         }
         return toReturn;
     }
+
+    @Override
+    public int isInList(Noun n) {
+        for(Noun item: allNouns) {
+            if(item.getName().equals(n.getName())) {
+                return allNouns.indexOf(item);
+            }
+        }
+        return -1;
+    }
+
+    @Override
+    public void addNoun(Noun nounToAdd) {
+        if(isInList(nounToAdd) == -1) {
+            allNouns.add(nounToAdd);
+        }
+        else {
+            allNouns.get(isInList(nounToAdd)).setQuantity(allNouns.get(isInList(nounToAdd)).getQuantity()+1);
+        }
+    }
 }

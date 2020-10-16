@@ -38,4 +38,8 @@ public class Noun {
     public boolean isEnabled() {
         return enabled;
     }
+
+    public void setQuantity(long l) {
+        quantity = l;
+    }
 }

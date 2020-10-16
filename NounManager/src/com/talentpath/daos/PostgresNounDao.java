@@ -9,4 +9,14 @@ public class PostgresNounDao implements NounDao{
     public List<Noun> getAllNouns() {
         throw new UnsupportedOperationException();
     }
+
+    @Override
+    public void addNoun(Noun nounToAdd) {
+        throw new UnsupportedOperationException();
+    }
+
+    @Override
+    public int isInList(Noun n) {
+        throw new UnsupportedOperationException();
+    }
 }

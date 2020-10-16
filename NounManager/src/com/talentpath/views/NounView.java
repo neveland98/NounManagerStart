@@ -14,4 +14,6 @@ public interface NounView {
     void displayAllNouns(List<Noun> allNouns);
 
     void displayNoun( Noun toDisplay );
+
+    String addNoun();
 }

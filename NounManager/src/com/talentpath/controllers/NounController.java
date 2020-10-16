@@ -32,6 +32,7 @@ public class NounController {
                 int choice = view.mainMenu();
                 switch (choice) {
                     case 1:
+
                         addNoun();
                         break;
                     case 2:
@@ -62,7 +63,8 @@ public class NounController {
     }
 
     private void addNoun() {
-        throw new UnsupportedOperationException();
+
+        service.addNoun(view.addNoun());
 
     }
 

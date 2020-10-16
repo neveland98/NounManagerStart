@@ -54,4 +54,9 @@ public class EnglishNounView implements NounView {
     public void displayNoun(Noun toDisplay) {
         io.print( toDisplay.getId() + ": " + toDisplay.getName() + " ["+toDisplay.getQuantity()+"]\n"  );
     }
+
+    @Override
+    public String addNoun() {
+        return io.getString("Enter the name of a noun: ");
+    }
 }

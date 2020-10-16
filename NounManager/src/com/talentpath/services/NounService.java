@@ -16,4 +16,9 @@ public class NounService {
     public List<Noun> getAllNouns() {
         return dao.getAllNouns();
     }
+
+    public void addNoun(String s) {
+        Noun nounToAdd = new Noun(s.hashCode(),s,1L,false);
+        dao.addNoun(nounToAdd);
+    }
 }
